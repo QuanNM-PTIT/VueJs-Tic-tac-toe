@@ -46,6 +46,7 @@
 
   const check = (x, y) =>
   {
+    console.log(x + " " + y);
     if (a[0][0].value != "" && a[0][0].value == a[1][1].value && a[1][1].value == a[2][2].value)
         return true;
     if (a[0][2].value != "" && a[0][2].value == a[1][1].value && a[1][1].value == a[2][0].value)
@@ -61,6 +62,7 @@
     }
     if (ok && a[0][y] != "")
       return ok;
+    ok = true;
     for (let i = 1; i < 3; ++i)
     {
       if (a[x][i].value != a[x][0].value)
